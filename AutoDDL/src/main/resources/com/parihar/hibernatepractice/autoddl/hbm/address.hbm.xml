@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.parihar.hibernatepractice.autoddl.beans.Address"
+		table="address" schema="practicedb">
+
+		<id name="addressId" type="java.lang.Integer">
+			<column name="ADDRESSID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="city" type="java.lang.String">
+			<column name="CITY" length="20" not-null="true"
+				unique="false" />
+		</property>
+		<property name="state" type="java.lang.String">
+			<column name="STATE" length="20" not-null="true"
+				unique="false" />
+
+		</property>
+
+
+
+	</class>
+
+
+</hibernate-mapping>
