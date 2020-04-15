@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.parihar.hibernatepractice.autoddl.beans.ContactInformation"
+		table="contactinformation" schema="practicedb">
+
+		<id name="contactId" type="java.lang.Integer">
+			<column name="CONTACTID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="email" type="java.lang.String">
+			<column name="EMAIL" length="20" not-null="true"
+				unique="false" />
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="PHONE" length="20" not-null="true"
+				unique="false" />
+		</property>
+
+
+
+	</class>
+
+
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.parihar.hibernatepractice.autoddl.beans.Student"
+		table="student1" schema="practicedb">
+		<id name="studentId" type="java.lang.Integer">
+			<column name="STUDENTID" />
+			<generator class="identity" />
+		</id>
+		<property name="firstName" type="java.lang.String">
+			<column name="FIRSTNAME" length="10" not-null="true"
+				unique="false" />
+		</property>
+		<property name="lastName" type="java.lang.String">
+			<column name="LASTNAME" length="20" not-null="true"
+				unique="false" />
+
+		</property>
+
+	</class>
+</hibernate-mapping>
